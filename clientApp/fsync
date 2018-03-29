@@ -18,7 +18,9 @@ function merge_upstream() {
 }
 
 function commit_to_origin() {
+  echo "create commit"
   git commit -am "updating from upstream"
+  echo "push to origin"
   git push
 }
 
