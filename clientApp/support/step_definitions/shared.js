@@ -45,6 +45,10 @@
           cy.visit('/');
         });
 
+        given('I am on the {string} tab', function(tab) {
+          cy.visit(tab);
+        });
+
         /******************************************************************
          * WHEN
          ******************************************************************/
@@ -54,6 +58,10 @@
             .get(id)
             .should('contain', tab)
             .click();
+        });
+
+        when('I click the back button', function() {
+          cy.go('back');
         });
 
         /******************************************************************
@@ -66,6 +74,10 @@
 
         then('the URL is {string}', function(url) {
           cy.url().should('contain', url);
+        });
+
+        then('I should not see {string} in the URL', function(url) {
+          cy.url().should('not.include', url);
         });
       },
       {}
