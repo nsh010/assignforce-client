@@ -5,6 +5,8 @@ Feature: The Trainers Page
     When I click on the "TRAINERS" tab in the "navbar"
     Then the URL is "/trainers"
 
+  Scenario: Add trainers
+
   Scenario: Check if you can see active and inactive trainers
 
   Scenario: DL the active trainer resume
@@ -12,8 +14,6 @@ Feature: The Trainers Page
   Scenario: Cannot download inactive trainer's resume
 
   Scenario: Check when you click a trainer that you can see their profile
-
-  Scenario: Add trainers
 
   Scenario: Deactivate trainers
 

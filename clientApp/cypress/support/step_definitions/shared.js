@@ -4,6 +4,14 @@
 
 given('I have just logged in', () => {
   cy.visit('/');
+  if (cy.get('#auth0-lock-container-1')) {
+    console.log('Need to log in');
+    cy.get('input[name=email]').type('tester@revature.com');
+    cy.get('input[name=password]').type('24wP~u3jt1s$qb"S]/e^Qim%>');
+    cy.get('button.auth0-lock-submit').click();
+  } else {
+    console.log('Already logged in');
+  }
 });
 
 /******************************************************************
